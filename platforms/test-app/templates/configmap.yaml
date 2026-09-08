@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: test-app-config
+  namespace: {{ .Values.namespace }}
+
+data:
+  owner: {{ .Values.config.owner | quote }}
+  environment: {{ .Values.config.environment | quote }}
